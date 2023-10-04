@@ -158,7 +158,7 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
-    margin-bottom: 25%;
+    margin-bottom: 10%;
 }
 
 .cover::after {
