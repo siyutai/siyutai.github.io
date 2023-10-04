@@ -218,13 +218,13 @@ li {
 }
 
 .theme2 .btn.ios {
-    background-color: var(--theme-color);
-    color: #fff;
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
 }
 
 .theme2.style1 .btn.android {
-    border: 1px solid var(--theme-color);
-    color: var(--theme-color);
+    background-color: var(--theme-color);
+    color: #fff;
 }
 
 .theme2 .cover {
