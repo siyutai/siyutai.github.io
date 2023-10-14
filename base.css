@@ -5,22 +5,7 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html,
-body,
-p,
-ul,
-dl,
-dt,
-dd,
-br,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol {
+html,body,p,ul,dl,dt,dd,br,hr,h1,h2,h3,h4,h5,h6,ol {
     margin: 0;
     padding: 0;
 }
@@ -38,17 +23,12 @@ html {
         font-size: 1000vw/37.5
     }
 } */
-body,
-button,
-input,
-select,
-textarea {
+body,button,input,select,textarea {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft Yahei";
     outline: 0;
 }
 
-body,
-html {
+body,html {
     height: 100%;
 }
 
@@ -62,8 +42,7 @@ button {
     font-size: inherit;
 }
 
-input,
-textarea {
+input,textarea {
     -webkit-user-select: auto !important;
     -webkit-touch-callout: inherit !important;
 }
@@ -72,11 +51,7 @@ textarea {
     outline: none;
 }
 
-a,
-a:hover,
-a:visited,
-a:focus,
-a:link {
+a,a:hover,a:visited,a:focus,a:link {
     color: inherit;
     text-decoration: none;
     outline: none;
@@ -97,23 +72,6 @@ li {
     margin: 0 auto;
     height: 100%;
     background: #fefefe;
-}
-
-:root {
-    /* 绿色 */
-    --green-color: #7abd9a;
-
-    /* 深蓝 */
-    --dark-blue-color: #132668;
-
-    /* 橙色 */
-    --orange-color: #ee7a45;
-
-
-    --theme1-color: var(--dark-blue-color);
-    --theme2-color: var(--green-color);
-    --theme3-color: var(--orange-color);
-
 }
 
 .flex {
@@ -153,7 +111,7 @@ li {
 .cover {
     position: relative;
     width: 100%;
-    height: 50%;
+    height: 75%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -161,101 +119,30 @@ li {
     margin-bottom: 10%;
 }
 
-.cover::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--theme1);
-    opacity: .2;
-}
-
 .btn:active {
     opacity: 0.6;
 }
 
-.style1 .btn {
+.style .btn {
     margin: 30px;
     box-shadow: 0 10px 12px -6px #9b9b9b;
 }
 
-/* --------------------- theme1 start --------------------- */
-.theme1 {
-    --theme-color: var(--theme1-color);
+
+.theme {
+    --theme-color: #fb7299;
 }
 
-.theme1 .btn:first-child {
-    margin-bottom: 0;
-}
-
-.theme1 .btn.ios {
-    color: #fff;
-}
-
-.theme1 .btn.ios {
-    background-color: var(--theme-color);
-    color: #fff;
-}
-
-.theme1.style1 .btn.android {
+.theme .btn.ios {
     border: 1px solid var(--theme-color);
     color: var(--theme-color);
 }
 
-.theme1 .cover {
-    background-color: var(--theme-color);
-}
-
-.theme1 .cover::after {
-    content: '';
-    background-color: var(--theme-color);
-}
-
-/* --------------------- theme1 end --------------------- */
-
-.theme2 {
-    --theme-color: var(--theme2-color);
-}
-
-.theme2 .btn.ios {
-    border: 1px solid var(--theme-color);
-    color: var(--theme-color);
-}
-
-.theme2.style1 .btn.android {
+.theme.style .btn.android {
     background-color: var(--theme-color);
     color: #fff;
 }
 
-.theme2 .cover {
-    background-color: var(--theme-color);
-}
-
-.theme2 .cover::after {
-    content: '';
-    background-color: var(--theme-color);
-}
-
-/* --------------------- .theme3-color --------------------- */
-.theme3 {
-    --theme-color: var(--theme3-color);
-}
-
-.theme3 .btn.ios {
-    background-color: var(--theme-color);
-    color: #fff;
-}
-
-.theme3.style1 .btn.android {
-    border: 1px solid var(--theme-color);
-    color: var(--theme-color);
-}
-
-.theme3 .cover {
-    background-color: var(--theme-color);
-}
-
-.theme3 .cover::after {
-    content: '';
+.theme .cover {
     background-color: var(--theme-color);
 }
