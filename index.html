@@ -1,87 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN"><head>
+		<title>APP下载</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="robots" contect="all">
+		<link href="/favicon.ico" rel="icon">
+		<link href="http://dl.siyutai.cc/layui.css" rel="stylesheet">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				color:#4D5656;
+			}
+			body {
+				background-color: #ecf0f3;
+			}
+			.container {
+				width: 90%;
+				height: 100%;
+				position: relative;
+				z-index: 1;
+				max-width: 640px;
+				min-width: 320px;
+				margin: 0 auto;
+				
+			}
+			.content {
+				
+				margin-top:20px;
+				
+			}
+			.content section{
+				position: absolute;
+				opacity: 0;
+				transition: .4s ease-out;
+			}
+			.content section.active-section{
+				opacity: 1;
+			}
+			.main {
+				width: 100%;
+				height: 100%;
+				z-index:1;
+				display:inline-block;
+				position:relative;
+				overflow: hidden;
+				border-radius: 10px;
+			}
+			.bgt {
+				background-repeat: no-repeat;
+				background-size: cover;
+				width:100%;
+			}
+			.box{
+				margin-top:10px;
+				border-radius: 15px;
+				padding:10px;
+				margin-bottom:10px;
+				background: #fff;
+			}
+			#boxs{
+				margin:0px;
+				height: 100%;
+				overflow-x: hidden;
+			}
+			#boxs::-webkit-scrollbar{
+				width: 5px;
+				height: 5px;
+			}
+			#boxs::-webkit-scrollbar-track{
+				border-radius: 12px;
+				background-color: #eee;
+			}
+			#boxs::-webkit-scrollbar-thumb{
+				border-radius: 12px;
+				background-color: #aaa;
+			}
+			.web{
+				width:90%;
+				height:20px;
+				text-align:center;
+				background: #fb7299;
+				box-shadow:0 2px 5px rgba(0,0,0,.15);
+				margin:0 auto;
+				margin-top:0px;
+				margin-bottom:10px;
+				padding:10px;
+				border-radius:5px;
+				font-size:15px;
+				font-weight: bold;
+				color: #fff;
+			}
+			.tips{
+				width:90%;
+				border-bottom-right-radius: 2px;
+				border-left: 4px solid #71e9e8;
+				border-top-right-radius: 2px;
+				margin: 0 auto;
+				//text-align:center;
+				padding: 3px;
+				position: relative;
+				background-color: #f8f8f8;
+				font-size:12px;
+			}
+			.A {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<section class="home-me-section active-section">
+					<div class="main">
+					
+						<img src="http://dl.siyutai.cc/img/syttop.jpg" class="bgt">
+						<div class="box">
+							<div id="boxs">
+						        <div class="tips" id="tick">未检测到使用的设备类型</div>
+					        </div>
+					    </div>
+						
+						<div id="android_show" style="display:none;">
+						<div class="box">
+							<div id="boxs">
+								<div class="track-list">
+									<ul>
+										<a href="http://dl.siyutai.cc/siyutai.apk" target="_blank" class="A"><div class="web">安卓免费下载</div></a>
+										
+										
+										<div class="tips"><strong>【提示】</strong>安卓下载后请在下载管理、文件管理或者通知栏里面找APK安装包！安装包解析失败请重新下载！</div>
+									</ul>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+						<div id="ios_show" style="display:none;">
+						<div class="box">
+							<div id="boxs">
+								<div class="track-list">
+									<ul>
+										<a href="http://dl.siyutai.cc/ios.mobileconfig" target="_blank" class="A" onclick="ios()"><div class="web">苹果免费下载</div></a>
+										
+										
+										<div class="tips"><strong>【提示】</strong>请用Safari浏览器打开本站，下载后请前往“设置 >> 通用 >> (VPN与设备管理器)描述文件 >> App >> 安装（右上角）”。</div>
+										<div class="tips"><strong>【提示】</strong>如果打开APP显示下载页，请前往“设置 >> Safari浏览器 >> 请求桌面网站 >> 所有网站 >> 关闭”后重新打开APP即可！</div>
+									</ul>
+								</div>
+							</div>
+						</div>
+						</div>
+						
+						<div id="wxtips_show" style="display:none;">
+    						<div class="box">
+    							<div id="boxs">
+    								<img src="http://dl.siyutai.cc/img/wxtips.png" width="100%" height="100%">
+    							</div>
+    						</div>
+						</div>
+						
+						<div class="box">
+							<div id="boxs">
+								<div class="layui-carousel" id="ID-image" style="margin: auto; border-radius: 25px; width: 328px; height: 640px;" lay-anim="fade" lay-indicator="inside" lay-arrow="hover">
+									<div carousel-item="" style="border-radius: 25px;">
+										<div class="layui-this"><img src="http://dl.siyutai.cc/img/syt1.jpg" width="100%" height="100%"></div>
+										<div class=""><img src="http://dl.siyutai.cc/img/syt2.jpg" width="100%" height="100%"></div>
+										<div class=""><img src="http://dl.siyutai.cc/img/syt3.jpg" width="100%" height="100%"></div>
+										
+									</div>
+								<div class="layui-carousel-ind"><ul><li class="layui-this"></li><li class=""></li><li class=""></li><li class=""></li><li class=""></li></ul></div><button class="layui-icon layui-carousel-arrow" lay-type="sub"></button><button class="layui-icon layui-carousel-arrow" lay-type="add"></button></div>
+							</div>
+						</div>
+						
+					</div>
+				</section>
+			</div>
+		</div>
 
-<head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="screen-orientation" content="portrait" />
-    <meta name="format-detection" content="telephone=no">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-fullscreen" content="true">
-    <title>APP下载</title>
-    <link rel="stylesheet" href="./base.css?v=1.03" />
-</head>
+		<script>
+			var ua = navigator.userAgent.toLowerCase();
+			var tick = document.getElementById("tick");
+			var img = document.getElementById("img");
+		
+			if (ua.match(/android/i) == "android") {
+			    	if (ua.match(/twitter/i) == "twitter") {
+				    tick.innerText = "设备：安卓 | 环境：推特 | 无法下载？请使用其它浏览器打开该网页";
+				} else {
+				    tick.innerText = "当前设备：安卓Android";
+				    document.getElementById("android_show").style.display = "block";
+				}
+		        } else if (ua.match(/iphone/i) == "iphone" || ua.match(/ipad/i) == "ipad") {
+		                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		                    tick.innerText = "设备：苹果iOS | 环境：微信 | 请用Safari浏览器打开";
+		                    document.getElementById("wxtips_show").style.display = "block";
+		                } else if (ua.match(/twitter/i) == "twitter") {
+		                    tick.innerText = "设备：苹果iOS | 环境：推特 | 无法下载？请使用Safari浏览器打开该网页";
+		                } else {
+		                    tick.innerText = "当前设备：苹果iOS";
+		                    document.getElementById("ios_show").style.display = "block";
+		                }
+			} else {
+				document.getElementById("ios_show").style.display = "block";
+				document.getElementById("android_show").style.display = "block";
+			}
 
-<body>
-    <div class="app style theme">
-        <div id="eCover" style="background-image: url(./cover.jpg);display: flex;align-items: center;" class="cover">
-            <div style="color:#fff;text-shadow:1px 1px black;background-color: rgb(0 0 0 / 30%);">
-                <h3 style="margin:4vw;padding: 4vw;">
-                1、安卓手机下载完点击安装即可（华为手机需关闭纯净模式：设置 &gt;&gt; 系统和更新 &gt;&gt; 纯净模式 &gt;&gt; 退出）
-                <br /><br />
-                2、iphone请使用Safari浏览器下载（下载后：设置 &gt;&gt; 通用 &gt;&gt; (VPN与设备管理器)描述文件 &gt;&gt; App &gt;&gt; 安装）
-                <br /><br />
-                3.下载安装后如果无法进入APP，请切换其它网络尝试
-                <br />
-            </h3></div>
-        </div>
-        <div class="btn-group">
-            <a id="eAndroid" href="" class="btn android flex ">
-                <svg t="1622038313232" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" p-id="1204" width="26" height="26">
-                    <path
-                        d="M287.01171846 737.01171846c0 20.62392627 16.87412109 37.49804737 37.49804736 37.49804736l37.49804736 0 0 131.24316446c0 31.12337901 25.12369161 56.2470706 56.2470706 56.2470706s56.2470706-25.12369161 56.24707062-56.2470706l0-131.24316445 74.99609385-1e-8 0 131.24316446c0 31.12337901 25.12369161 56.2470706 56.2470706 56.2470706s56.2470706-25.12369161 56.2470706-56.2470706l0-131.24316445 37.49804737-1e-8c20.62392627 0 37.49804737-16.87412109 37.49804736-37.49804736l0-374.98047012-449.97656397 0 0 374.98047012zM193.26660049 362.03124834c-31.12337901 0-56.2470706 25.12369161-56.24707061 56.24707061l0 262.48632891c0 31.12337901 25.12369161 56.2470706 56.24707061 56.2470706s56.2470706-25.12369161 56.2470706-56.2470706l0-262.48632891c0-31.12337901-25.12369161-56.2470706-56.2470706-56.24707061zM830.73339951 362.03124834c-31.12337901 0-56.2470706 25.12369161-56.2470706 56.24707061l0 262.48632891c0 31.12337901 25.12369161 56.2470706 56.2470706 56.2470706s56.2470706-25.12369161 56.24707061-56.2470706l0-262.48632891c0-31.12337901-25.12369161-56.2470706-56.24707061-56.24707061zM644.36810557 143.0426542l48.93495117-48.93495118c7.31211943-7.31211943 7.31211943-19.1240042 0-26.43612275s-19.1240042-7.31211943-26.43612276 0l-55.49710956 55.30961953c-29.99843789-14.81172891-63.55919004-23.4362795-99.36982442-23.43627949-35.99812529 0-69.74636748 8.62455058-99.93229541 23.62376953l-55.68459961-55.68459961c-7.31211943-7.31211943-19.1240042-7.31211943-26.43612275 0s-7.31211943 19.1240042 0 26.43612276l49.12244121 49.12244121c-55.68459961 41.06036162-92.05770498 107.05692393-92.05770498 181.49054765l449.97656396 0c0-74.62111377-36.56059541-140.61767607-92.62017597-181.49054765zM437.00390615 249.53710713l-37.49804737 0 0-37.49804736 37.49804737 0 0 37.49804736zM624.49414122 249.53710713l-37.49804737 0 0-37.49804736 37.49804737 0 0 37.49804736z"
-                        fill="#ffffff" p-id="1205"></path>
-                </svg>
-                <span>Android下载</span>
-            </a>
-            <a id="eIphone" href="" class="btn ios flex">
-                <svg t="1622038757580" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" p-id="1506" width="26" height="26">
-                    <path
-                        d="M817.3795552 853.33333333C779.60533333 909.76711147 739.5555552 964.8355552 678.57066667 965.74577813 617.58577813 967.11111147 598.016 929.792 528.83911147 929.792 459.20711147 929.792 437.81688853 964.8355552 380.01777813 967.11111147 320.39822187 969.38666667 275.34222187 907.0364448 237.11288853 851.968 159.28888853 739.5555552 99.66933333 532.48 179.76888853 393.216 219.3635552 324.03911147 290.36088853 280.3484448 367.27466667 278.98311147 425.52888853 278.07288853 481.0524448 318.57777813 517.00622187 318.57777813 552.50488853 318.57777813 619.86133333 269.88088853 690.4035552 277.16266667 719.98577813 278.528 802.816 288.9955552 856.064 367.27466667 851.968 370.00533333 757.30488853 425.52888853 758.21511147 540.672 759.5804448 678.1155552 878.8195552 724.08177813 880.18488853 724.53688853 878.8195552 727.72266667 861.07022187 790.07288853 817.3795552 853.33333333M557.51111147 125.1555552C590.73422187 87.38133333 645.80266667 58.70933333 691.31377813 56.88888853 697.23022187 110.13688853 675.84 163.84 643.98222187 202.06933333 612.5795552 240.75377813 560.69688853 270.79111147 509.7244448 266.69511147 502.89777813 214.35733333 528.384 159.744 557.51111147 125.1555552Z"
-                        fill="var(--theme-color)" p-id="1507"></path>
-                </svg>
-                <span>iPhone下载</span></a>
-        </div>
-    </div>
-    <script type="text/javascript">
-        var $ = function (ele) {
-            return document.querySelector(ele);
-        }
-        //配置
-        var config = {
-            cover: '', //封面图片默认：。./imgs/cover4.jpg,替换cover4.jpg即可
-            iPhone_download_name: "iPhone下载", // iPhone下载名称
-            android_download_name: "Android下载", // Android下载名称
-            iPhone_download_url: "./ios.mobileconfig", // iPhone下载链接
-            android_download_url: "https://siyutai66.lanzouh.com/iS6Y51bmu1wd", // Android下载链接
-        }
-        window.onload = function () {
-            var iphone = $('#eIphone');
-            var android = $('#eAndroid');
-            var cover = $('#eCover');
+			function ios(){
+				alert('提示：iOS请务必先卸载后安装！');
+			}
+			function android(){
+				test.hello('http://dl.siyutai.cc/siyutai.apk');
+			}
+		</script>
+		
+		<script src="http://dl.siyutai.cc/layui.js"></script>
+		<script>
+			layui.use(['carousel'],function(){
+				var carousel = layui.carousel;
+					carousel.render({
+					elem: '#ID-image',
+					width: 328,
+					height: 640,
+					anim:'fade',
+					interval: 2000
+				});
+			});
+		</script>
+	
 
-            //设置封面
-            cover.style.backgroundImage = 'url(./cover.jpg)';
-
-            //iphone 下载链接设置
-            iphone.href = config.iPhone_download_url;
-
-            //iphone 下载链接名称设置
-            iphone.querySelector('span').innerText = config.iPhone_download_name;
-
-            //android 下载链接设置
-            android.href = config.android_download_url;
-            //android 下载链接名称设置
-            android.querySelector('span').innerText = config.android_download_name;
-        }
-    </script>
-</body>
-
-</html>
+</body></html>
