@@ -4,7 +4,7 @@
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="robots" contect="all">
 		<link href="/favicon.ico" rel="icon">
-		<link href="http://dl.siyutai.cc/layui.css" rel="stylesheet">
+		<link href="/layui.css" rel="stylesheet">
 		<style type="text/css">
 			* {
 				margin: 0;
@@ -93,7 +93,7 @@
 			.tips{
 				width:90%;
 				border-bottom-right-radius: 2px;
-				border-left: 4px solid #71e9e8;
+				border-left: 4px solid red;
 				border-top-right-radius: 2px;
 				margin: 0 auto;
 				//text-align:center;
@@ -113,10 +113,10 @@
 				<section class="home-me-section active-section">
 					<div class="main">
 					
-						<img src="http://dl.siyutai.cc/img/syttop.jpg" class="bgt">
-						<div class="box">
+						<img src="/img/syttop.jpg" class="bgt">
+						<div class="box" style="background:none">
 							<div id="boxs">
-						        <div class="tips" id="tick">未检测到使用的设备类型</div>
+						        <div id="tick">未检测到使用的设备类型</div>
 					        </div>
 					    </div>
 						
@@ -125,10 +125,10 @@
 							<div id="boxs">
 								<div class="track-list">
 									<ul>
-										<a href="http://dl.siyutai.cc/siyutai.apk" target="_blank" class="A"><div class="web">安卓免费下载</div></a>
+										<a href="/siyutai.apk" target="_blank" class="A"><div class="web">安卓免费下载</div></a>
 										
 										
-										<div class="tips"><strong>【提示】</strong>安卓下载后请在下载管理、文件管理或者通知栏里面找APK安装包！</div>
+										<div class="tips"><strong>【提示】</strong>安卓下载后请在下载管理、文件管理或者通知栏里面找APK安装包！安装包解析失败请重新下载！</div>
 									</ul>
 								</div>
 							</div>
@@ -140,7 +140,7 @@
 							<div id="boxs">
 								<div class="track-list">
 									<ul>
-										<a href="http://dl.siyutai.cc/ios.mobileconfig" target="_blank" class="A" onclick="ios()"><div class="web">苹果免费下载</div></a>
+										<a href="/ios.mobileconfig" target="_blank" class="A" onclick="ios()"><div class="web">苹果免费下载</div></a>
 										
 										
 										<div class="tips"><strong>【提示】</strong>请用Safari浏览器打开本站，下载后请前往“设置 >> 通用 >> (VPN与设备管理器)描述文件 >> App >> 安装（右上角）”。</div>
@@ -154,7 +154,7 @@
 						<div id="wxtips_show" style="display:none;">
     						<div class="box">
     							<div id="boxs">
-    								<img src="http://dl.siyutai.cc/img/wxtips.png" width="100%" height="100%">
+    								<img src="/img/wxtips.png" width="100%" height="100%">
     							</div>
     						</div>
 						</div>
@@ -163,9 +163,9 @@
 							<div id="boxs">
 								<div class="layui-carousel" id="ID-image" style="margin: auto; border-radius: 25px; width: 328px; height: 640px;" lay-anim="fade" lay-indicator="inside" lay-arrow="hover">
 									<div carousel-item="" style="border-radius: 25px;">
-										<div class="layui-this"><img src="http://dl.siyutai.cc/img/syt1.jpg" width="100%" height="100%"></div>
-										<div class=""><img src="http://dl.siyutai.cc/img/syt2.jpg" width="100%" height="100%"></div>
-										<div class=""><img src="http://dl.siyutai.cc/img/syt3.jpg" width="100%" height="100%"></div>
+										<div class="layui-this"><img src="/img/syt1.jpg" width="100%" height="100%"></div>
+										<div class=""><img src="/img/syt2.jpg" width="100%" height="100%"></div>
+										<div class=""><img src="/img/syt3.jpg" width="100%" height="100%"></div>
 										
 									</div>
 								<div class="layui-carousel-ind"><ul><li class="layui-this"></li><li class=""></li><li class=""></li><li class=""></li><li class=""></li></ul></div><button class="layui-icon layui-carousel-arrow" lay-type="sub"></button><button class="layui-icon layui-carousel-arrow" lay-type="add"></button></div>
@@ -208,11 +208,11 @@
 				alert('提示：iOS请务必先卸载后安装！');
 			}
 			function android(){
-				test.hello('http://dl.siyutai.cc/siyutai.apk');
+				test.hello('/siyutai.apk');
 			}
 		</script>
 		
-		<script src="http://dl.siyutai.cc/layui.js"></script>
+		<script src="/layui.js"></script>
 		<script>
 			layui.use(['carousel'],function(){
 				var carousel = layui.carousel;
